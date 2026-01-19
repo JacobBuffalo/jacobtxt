@@ -36,11 +36,10 @@ excerpt: "Optional short summary for lists."
 Your content here.
 ```
 
-## Homepage status, links, and chatbox
+## Homepage status and links
 
 - Update the live status text in `_config.yml` under `status`.
 - Add or remove items in `_config.yml` under `links` to control the Links section.
-- The chatbox stores a note in the visitor’s browser (localStorage). Remove the Chatbox section in `index.html` if you don’t want it.
 
 ## Visit counter
 
