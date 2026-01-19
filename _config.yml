@@ -1,0 +1,9 @@
+title: "Jacobtxt"
+description: "A minimal, calm journal."
+url: "https://jacobbuffalo.github.io"
+baseurl: "/jacobtxt"
+markdown: kramdown
+permalink: /blog/:title/
+collections:
+  posts:
+    output: true
