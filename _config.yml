@@ -1,4 +1,4 @@
-title: "Jacobtxt"
+title: "jacobtxt"
 description: "A minimal, calm journal."
 url: "https://jacobbuffalo.github.io"
 baseurl: "/jacobtxt"
@@ -6,8 +6,8 @@ markdown: kramdown
 permalink: /blog/:title/
 status: "Quietly working on the next note."
 links:
-  - name: "Calm typography"
-    url: "https://sive.rs/typography"
+  - name: "Letterboxd"
+    url: "https://letterboxd.com/JacobRogersBUF/"
   - name: "Stillness playlist"
     url: "https://open.spotify.com/playlist/37i9dQZF1DX4PP3DA4J0N8"
   - name: "Slow reading list"
