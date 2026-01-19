@@ -4,7 +4,7 @@ A minimal, calm Jekyll blog designed for GitHub Pages.
 
 ## Local development
 
-1. Install dependencies:
+1. Install dependencies (first time only):
 
    ```bash
    bundle install
@@ -18,10 +18,13 @@ A minimal, calm Jekyll blog designed for GitHub Pages.
 
 3. Open <http://localhost:4000> in your browser.
 
+> If you don't already have a `Gemfile`, you can create one with `bundle init` and then add the
+> `github-pages` gem per the GitHub Pages documentation.
+
 ## Posting workflow (Zapier-friendly)
 
-Zapier (or any automation) can create a new post by committing a Markdown file into `_posts/` using the
-standard naming convention: `YYYY-MM-DD-slug.md`.
+Zapier (or any automation) can create a new post by writing a Markdown file into `_posts/` using the
+standard naming convention: `YYYY-MM-DD-title.md`.
 
 Each post should include YAML front matter and use the `post` layout:
 
@@ -51,10 +54,5 @@ The guestbook uses [Giscus](https://giscus.app) (GitHub Discussions). To activat
 ## Visit counter
 
 The footer includes a lightweight counter image from [hits.sh](https://hits.sh). Update the domain in
-`_layouts/default.html`:
-
-- **User site:** change `example.github.io` to `YOUR_USERNAME.github.io`.
-- **Project site:** change `example.github.io` to `YOUR_USERNAME.github.io/YOUR_REPO`.
-
-To remove the counter entirely, delete the single `<img class="visit-counter" ... />` line in
-`_layouts/default.html`.
+`_layouts/default.html` from `example.github.io` to your live site, or delete the `<img>` entirely to
+remove it.
