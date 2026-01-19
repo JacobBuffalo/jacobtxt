@@ -1,0 +1,23 @@
+---
+layout: default
+title: Home
+---
+<section class="intro">
+  <p class="intro-text">A quiet place for short notes, long walks, and clear skies.</p>
+</section>
+
+<section class="post-list">
+  <h2 class="section-title">Recent posts</h2>
+  <ul>
+    {% for post in site.posts limit: 6 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <a class="text-link" href="{{ '/blog/' | relative_url }}">Browse the archive</a>
+</section>
