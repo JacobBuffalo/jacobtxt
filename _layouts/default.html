@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 | default: site.description }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <img class="pixel" src="{{ '/assets/img/pixel-sky.svg' | relative_url }}" alt="" />
+          <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </div>
+        <nav class="site-nav" aria-label="Main">
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a href="{{ '/guestbook/' | relative_url }}">Guestbook</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© {{ site.time | date: '%Y' }} {{ site.title }}</span>
+        <span class="footer-divider">•</span>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a href="{{ '/guestbook/' | relative_url }}">Guestbook</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+        <span class="footer-divider">•</span>
+        <span class="footnote">
+          <span class="visit-label">visits</span>
+          <img
+            class="visit-counter"
+            src="https://hits.sh/example.github.io.svg?label=&color=7aa6c7&labelColor=efeff2&style=flat"
+            alt="visit counter"
+            loading="lazy"
+          />
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
