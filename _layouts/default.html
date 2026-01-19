@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 | default: site.description }}" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
     <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml" />
   </head>
   <body>
@@ -17,7 +17,7 @@
         </div>
         <nav class="site-nav" aria-label="Main">
           <a href="{{ '/blog/' | relative_url }}">Blog</a>
-          <a href="{{ '/guestbook/' | relative_url }}">Guestbook</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
         </nav>
       </div>
     </header>
@@ -31,6 +31,12 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© {{ site.time | date: '%Y' }} {{ site.title }}</span>
+        <span class="footer-divider">•</span>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
         <span class="footer-divider">•</span>
         <span class="footnote">
           <span class="visit-label">visits</span>
